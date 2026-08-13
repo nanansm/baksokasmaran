@@ -41,7 +41,7 @@ Belum ada slug redirect ber-`Lead` seperti `sinarberkah.com/wanasibox`. Kalau ik
 
 - `canonical` + OG absolut + `twitter:card` + OG image 1200×630
 - **JSON-LD `Restaurant`**: alamat, koordinat (-6.913934, 107.6151509), jam 07.00–19.00, `hasMenu`, `hasMap`, amenity, sameAs IG/TikTok
-- `h1` terlihat berisi keyword utama + `h2` pada blok konten (halaman tidak lagi thin content — ±180 kata)
+- `h1` terlihat berisi keyword utama. Deskripsi panjang + daftar menu **tidak ditampilkan** di halaman (permintaan klien) — dipindah ke `description` + `keywords` pada JSON-LD, bukan disembunyikan pakai `display:none` (hidden text = risiko penalti Google)
 - `sitemap.xml` + `robots.txt`
 - Favicon 32/64 + apple-touch-icon 180
 
