@@ -1,0 +1,311 @@
+/* ===== Bakso Kasmaran — biolink =====
+   Palet & elemen diturunkan dari materi IG/TikTok tim MOTÉ (Agustus 2026):
+   bar teal, tombol bayangan padat, wordmark Androgyne. */
+
+@font-face {
+    font-family: "Androgyne";
+    src: url("fonts/androgyne.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppins-400.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppins-600.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppins-700.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+}
+
+:root {
+    --merah: #eb3237;
+    --merah-tua: #c8262b;
+    --teal: #3698a5;
+    --teal-tua: #2b7b86;
+    --tinta: #22201f;
+    --putih: #fff;
+    --shadow-x: 5px;
+    --shadow-y: 7px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: clip;
+    max-width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Poppins", system-ui, -apple-system, sans-serif;
+    color: var(--tinta);
+    background: #1b1412;
+    min-height: 100svh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* latar foto outlet: di-blur tipis + scrim, biar foreground menang */
+.bg {
+    position: fixed;
+    inset: -14px;
+    background: url("assets/interior.webp") center / cover no-repeat;
+    filter: blur(3px) saturate(0.92);
+    z-index: -2;
+}
+.bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(24, 15, 12, 0.66);
+}
+
+.sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.wrap {
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 22px 20px 24px;
+    text-align: center;
+}
+
+.wordmark {
+    width: 210px;
+    height: auto;
+    display: block;
+    margin: 0 auto 22px;
+    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.45));
+}
+
+/* ===== bukti sosial ===== */
+.proof {
+    max-width: 100%;
+    margin: 12px auto 8px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 15px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-x) var(--shadow-y) 0 rgba(43, 123, 134, 0.85);
+    font-size: 12.5px;
+    font-weight: 600;
+}
+.proof .stars {
+    color: #f5a623;
+    letter-spacing: -1px;
+}
+.proof strong {
+    font-size: 15px;
+}
+.proof .sep {
+    opacity: 0.4;
+}
+
+.status {
+    margin: 12px 0 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+.status .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #9aa0a0;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.18);
+}
+.status.is-open .dot {
+    background: #4ad07a;
+}
+.status.is-closed .dot {
+    background: var(--merah);
+}
+
+/* ===== slideshow foto (utuh, tanpa crop) ===== */
+.photo {
+    margin: 0 0 22px;
+    background: var(--putih);
+    padding: 9px 9px 0;
+    border-radius: 22px;
+    box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--teal), 0 16px 34px rgba(0, 0, 0, 0.35);
+}
+.slides {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: 15px;
+    overflow: hidden;
+    background: var(--putih);
+}
+.slides img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    animation: slideshow 10s linear infinite;
+}
+.slides img:nth-child(1) { animation-delay: 0s; }
+.slides img:nth-child(2) { animation-delay: 2s; }
+.slides img:nth-child(3) { animation-delay: 4s; }
+.slides img:nth-child(4) { animation-delay: 6s; }
+.slides img:nth-child(5) { animation-delay: 8s; }
+
+@keyframes slideshow {
+    0% { opacity: 0; }
+    3% { opacity: 1; }
+    20% { opacity: 1; }
+    23% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slides img { animation: none; }
+    .slides img:nth-child(1) { opacity: 1; }
+}
+.photo figcaption {
+    padding: 9px 4px 11px;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #6a6360;
+}
+
+/* ===== tombol ===== */
+.links {
+    display: grid;
+    gap: 15px;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    text-align: left;
+    text-decoration: none;
+    color: var(--tinta);
+    background: var(--putih);
+    padding: 14px 16px;
+    border-radius: 18px;
+    box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--teal-tua);
+    transition:
+        transform 0.12s ease,
+        box-shadow 0.12s ease;
+}
+.btn:active {
+    transform: translate(var(--shadow-x), var(--shadow-y));
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+@media (hover: hover) {
+    .btn:hover {
+        transform: translate(2px, 3px);
+        box-shadow: 3px 4px 0 var(--teal-tua);
+    }
+}
+.btn b {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+.btn small {
+    display: block;
+    margin-top: 2px;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: #6f6764;
+    line-height: 1.35;
+}
+.btn .ic {
+    flex: 0 0 34px;
+    width: 34px;
+    height: 34px;
+    padding: 6px;
+    border-radius: 11px;
+    background: #f4efe9;
+    fill: var(--merah);
+}
+
+.btn--wa {
+    background: var(--merah);
+    color: var(--putih);
+    box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--teal-tua);
+}
+.btn--wa small {
+    color: rgba(255, 255, 255, 0.86);
+}
+.btn--wa .ic {
+    background: rgba(255, 255, 255, 0.16);
+    fill: var(--putih);
+}
+
+/* ===== footer bar teal ===== */
+.bar {
+    background: var(--teal);
+    color: var(--putih);
+    padding: 15px 20px;
+}
+.bar__in {
+    max-width: 460px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.bar__col {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 10.5px;
+    line-height: 1.35;
+    font-weight: 500;
+}
+.bar__col:first-child {
+    flex: 1.35;
+}
+.bar__col:nth-child(2) {
+    flex: 1;
+}
+.bar__logo {
+    flex: 0 0 auto;
+    width: 84px;
+    height: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 360px) {
+    .bar__logo {
+        width: 74px;
+    }
+    .bar__col {
+        font-size: 9.5px;
+    }
+}
