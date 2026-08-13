@@ -2,7 +2,7 @@
 
 Pengganti `linktr.ee/baksokasmaran`. Statis (HTML + CSS, tanpa build), pola sama seperti repo `kedainasi_sinarberkah`.
 
-**Status: lokal saja. Belum di-commit, belum di-push, belum ada domain.**
+**Live: https://baksokasmaran.com** (GitHub Pages + custom domain).
 
 ## Isi
 
@@ -37,6 +37,18 @@ Pixel dipasang di `<head>`. Event per tombol:
 
 Belum ada slug redirect ber-`Lead` seperti `sinarberkah.com/wanasibox`. Kalau iklan Agustus butuh tier intent tinggi, tinggal tambah folder `promo/index.html` dengan pola interstitial yang sama.
 
+## SEO
+
+- `canonical` + OG absolut + `twitter:card` + OG image 1200×630
+- **JSON-LD `Restaurant`**: alamat, koordinat (-6.913934, 107.6151509), jam 07.00–19.00, `hasMenu`, `hasMap`, amenity, sameAs IG/TikTok
+- `h1` terlihat berisi keyword utama + `h2` pada blok konten (halaman tidak lagi thin content — ±180 kata)
+- `sitemap.xml` + `robots.txt`
+- Favicon 32/64 + apple-touch-icon 180
+
+Target keyword realistis: **brand** (bakso kasmaran, bakso kasmaran bandung) dan **long-tail** (bakso kelapa bandung, bakso dalam batok kelapa, sate jando bandung, bakso jl kalimantan bandung). Keyword umum "bakso bandung" dikuasai listicle media besar — perang di situ lewat Google Business Profile + ulasan, bukan lewat halaman ini.
+
+⚠️ Link Maps lama (`maps.app.goo.gl/u54qgzapcljzxski8`, dipakai Linktree) **sudah mati** — diganti link CID permanen `maps.google.com/?cid=16718282620338350132`.
+
 ## Cara lihat lokal
 
 ```bash
@@ -45,16 +57,12 @@ python3 -m http.server 8765
 # buka http://localhost:8765
 ```
 
-## Kalau nanti dideploy (GitHub Pages)
+## Deploy
 
-1. Buat repo `nanansm/baksokasmaran`, push branch `main`.
-2. Settings → Pages → source `main` / root.
-3. Tambah file `CNAME` berisi domain, lalu DNS: 4 A record `185.199.108–111.153` + CNAME `www` → `nanansm.github.io` (mode DNS-only kalau lewat Cloudflare).
-4. Ganti link Linktree di bio IG & TikTok.
+`git push origin main` → live ±45 detik kemudian. Domain `baksokasmaran.com` via file `CNAME`.
 
 ## Belum diputuskan
 
-- Domain (`baksokasmaran.com`? subdomain?) — belum dibeli.
 - Jam buka: materi Agustus tertulis **07.00–19.00**, brand brief lama tertulis 10.00–19.00. Halaman ini pakai 07.00–19.00.
-- Menu masih menunjuk PDF di Google Drive (sama seperti Linktree). Opsi berikutnya: jadikan halaman `menu/` sendiri.
+- Menu menunjuk folder Google Drive. Opsi berikutnya: jadikan halaman `menu/` sendiri (bisa di-index Google, lebih cepat di HP).
 - Link GoFood/GrabFood/ShopeeFood belum ada datanya.

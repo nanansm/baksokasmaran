@@ -3,19 +3,23 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bakso Kasmaran — Bakso Dulu Baru Kamu</title>
+        <title>Bakso Kasmaran — Bakso Kelapa &amp; Bakso Bakar di Bandung</title>
         <meta
             name="description"
-            content="Bakso Kasmaran, Jl. Kalimantan No. 5 Bandung. Bakso Kelapa, Sate Jando, Soto Tangkar. Buka 07.00–19.00. 4,9★ dari 394 ulasan Google."
+            content="Bakso Kelapa dalam batok kelapa muda, sate jando hotplate, bakso bakar. Jl. Kalimantan No. 5, Bandung. Buka tiap hari 07.00–19.00, rating 4,9 di Google."
         />
+        <link rel="canonical" href="https://baksokasmaran.com/" />
         <meta name="theme-color" content="#EB3237" />
 
-        <meta property="og:title" content="Bakso Kasmaran — Bakso Dulu Baru Kamu" />
+        <meta property="og:title" content="Bakso Kasmaran — Bakso Kelapa &amp; Bakso Bakar di Bandung" />
+        <meta property="og:url" content="https://baksokasmaran.com/" />
+        <meta property="og:site_name" content="Bakso Kasmaran" />
+        <meta property="og:locale" content="id_ID" />
         <meta
             property="og:description"
-            content="Jl. Kalimantan No. 5 Bandung · buka 07.00–19.00 · 4,9★ dari 394 ulasan Google."
+            content="Jl. Kalimantan No. 5, Bandung · buka tiap hari 07.00–19.00 · rating 4,9 di Google."
         />
-        <meta property="og:image" content="assets/og.jpg" />
+        <meta property="og:image" content="https://baksokasmaran.com/assets/og.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -34,10 +38,17 @@
             {
                 "@context": "https://schema.org",
                 "@type": "Restaurant",
+                "@id": "https://baksokasmaran.com/#restaurant",
                 "name": "Bakso Kasmaran",
+                "alternateName": "Baso Kasmaran Bandung",
                 "slogan": "Bakso Dulu Baru Kamu",
-                "servesCuisine": ["Bakso", "Indonesian"],
-                "priceRange": "Rp 15.000 - Rp 45.000",
+                "description": "Kedai bakso di pusat kota Bandung. Menu andalan Bakso Kelapa yang disajikan di dalam batok kelapa muda, Sate Jando hotplate, bakso bakar, dan mie bakso kampung.",
+                "url": "https://baksokasmaran.com/",
+                "image": "https://baksokasmaran.com/assets/og.jpg",
+                "logo": "https://baksokasmaran.com/assets/apple-touch-icon.png",
+                "servesCuisine": ["Bakso", "Mie Bakso", "Masakan Indonesia"],
+                "priceRange": "Rp 4.000 - Rp 45.000",
+                "currenciesAccepted": "IDR",
                 "telephone": "+6281211180514",
                 "address": {
                     "@type": "PostalAddress",
@@ -47,13 +58,26 @@
                     "postalCode": "40113",
                     "addressCountry": "ID"
                 },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": -6.913934,
+                    "longitude": 107.6151509
+                },
                 "openingHoursSpecification": {
                     "@type": "OpeningHoursSpecification",
                     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
                     "opens": "07:00",
                     "closes": "19:00"
                 },
-                "hasMap": "https://maps.app.goo.gl/u54qgzapcljzxski8",
+                "hasMenu": "https://drive.google.com/drive/folders/1L7NcCXrOeLNwkQmPaydXLqgrflcsuaD9?usp=sharing",
+                "hasMap": "https://maps.google.com/?cid=16718282620338350132",
+                "areaServed": {"@type": "City", "name": "Bandung"},
+                "amenityFeature": [
+                    {"@type": "LocationFeatureSpecification", "name": "Tempat duduk outdoor", "value": true},
+                    {"@type": "LocationFeatureSpecification", "name": "Parkir", "value": true},
+                    {"@type": "LocationFeatureSpecification", "name": "Makan di tempat", "value": true},
+                    {"@type": "LocationFeatureSpecification", "name": "Bungkus / take away", "value": true}
+                ],
                 "sameAs": [
                     "https://www.instagram.com/baksokasmaran/",
                     "https://www.tiktok.com/@bakso.kasmaran"
@@ -111,7 +135,7 @@
                 height="249"
             />
 
-            <h1 class="sr">Bakso Kasmaran — Bakso Dulu Baru Kamu</h1>
+            <h1 class="tag-h1">Bakso kelapa &amp; bakso bakar di Bandung</h1>
 
             <!-- bukti sosial + status jam -->
             <div class="proof">
@@ -153,7 +177,7 @@
 
                 <a
                     class="btn"
-                    href="https://drive.google.com/file/d/1BVNztOC3pD2Twwpdrp2cm2tEZx0JaX_G/view?usp=sharing"
+                    href="https://drive.google.com/drive/folders/1L7NcCXrOeLNwkQmPaydXLqgrflcsuaD9?usp=sharing"
                     target="_blank"
                     rel="noopener"
                     data-ev="ViewMenu"
@@ -161,13 +185,13 @@
                     <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h9l5 5v13.5A2.5 2.5 0 0 1 17.5 23h-11A2.5 2.5 0 0 1 4 20.5v-16A2.5 2.5 0 0 1 6.5 2H6Zm8 1.5V8h4.5L14 3.5ZM8 12h8v1.6H8V12Zm0 3.4h8V17H8v-1.6ZM8 8.6h4v1.6H8V8.6Z"/></svg>
                     <span>
                         <b>Lihat Menu Kasmaran</b>
-                        <small>Bakso Kelapa, Sate Jando, Soto Tangkar &amp; kawan-kawan</small>
+                        <small>Bakso Kelapa, Sate Jando, Mie Bakso Kampung, bakso aci</small>
                     </span>
                 </a>
 
                 <a
                     class="btn"
-                    href="https://maps.app.goo.gl/u54qgzapcljzxski8"
+                    href="https://maps.google.com/?cid=16718282620338350132"
                     target="_blank"
                     rel="noopener"
                     data-ev="FindLocation"
@@ -193,6 +217,32 @@
                     </span>
                 </a>
             </nav>
+
+            <section class="tentang">
+                <h2>Bakso di pusat kota Bandung, buka dari jam 7 pagi</h2>
+                <p>
+                    Bakso Kasmaran ada di Jl. Kalimantan No. 5, Merdeka — jalan kaki dari
+                    Balai Kota Bandung dan SMA 3. Parkir luas, ada kursi outdoor, 80 tempat
+                    duduk. Buka tiap hari 07.00–19.00, jadi cocok buat sarapan sampai makan sore.
+                </p>
+                <p>
+                    Yang paling dicari: <strong>Bakso Kelapa</strong> — mie, bakso urat, tetelan,
+                    kuah kencur, disajikan langsung di dalam batok kelapa muda.
+                    Lalu <strong>Sate Jando</strong> bakso bakar di atas hotplate,
+                    <strong>Mie Bakso Kampung</strong> spesial iga, sumsum, atau tetelan, dan
+                    <strong>Bakso Aci Garutan</strong>. Harga Rp 15.000–45.000 per porsi.
+                </p>
+                <ul class="tag">
+                    <li>Bakso Kelapa</li>
+                    <li>Sate Jando</li>
+                    <li>Bakso Bakar</li>
+                    <li>Mie Bakso Kampung</li>
+                    <li>Bakso Iga</li>
+                    <li>Bakso Aci Garutan</li>
+                    <li>Mie Ayam</li>
+                    <li>Yamin</li>
+                </ul>
+            </section>
         </main>
 
         <!-- footer bar teal, persis pola konten IG -->
